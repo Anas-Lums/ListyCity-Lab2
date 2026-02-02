@@ -63,14 +63,14 @@ public class MainActivity extends AppCompatActivity {
         cityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                selectedPosition = position; // Save the index of the item clicked
+                selectedPosition = position; 
             }
         });
 
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Check if a valid item is selected
+                
                 if (selectedPosition != -1 && selectedPosition < dataList.size()) {
                     dataList.remove(selectedPosition);
                     cityAdapter.notifyDataSetChanged();
